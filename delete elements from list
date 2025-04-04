@@ -1,0 +1,32 @@
+#include <stdio.h>  
+
+int main() {  
+    int N, i, elementToDelete, found = 0;  
+    scanf("%d", &N);  
+    int arr[N];  
+    
+    for(i = 0; i < N; i++) {  
+        scanf("%d", &arr[i]);  
+    }  
+    
+    scanf("%d", &elementToDelete);  
+    
+    for(i = 0; i < N; i++) {  
+        if(arr[i] == elementToDelete && !found) {  
+            found = 1;  
+            for(int j = i; j < N - 1; j++) {  
+                arr[j] = arr[j + 1];  
+            }  
+            N--;  
+        }  
+    }  
+    
+    for(i = 0; i < N; i++) {  
+        printf("%d", arr[i]);  
+        if(i < N - 1) {  
+            printf(" ");  
+        }  
+    }  
+    
+    return 0;  
+}
