@@ -1,0 +1,22 @@
+
+#include <stdio.h>
+
+int main() {
+    int N;
+    scanf("%d", &N);
+
+    int elements[N];
+    for (int i = 0; i < N; i++) {
+        scanf("%d", &elements[i]);
+    }
+
+    for (int i = 0; i < N; i++) {
+        printf("%d", elements[i]);
+        if (i < N - 1) {
+            printf(" ");
+        }
+    }
+    printf("\n");
+
+    return 0;
+}
